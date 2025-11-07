@@ -78,13 +78,14 @@ public class MyBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotUsername() {
-        return "lifetrack_java_bot";
+        return "***";
     }
 
     @Override
     public String getBotToken() {
-        return "8347639042:AAFXcwdcWL3pTnCVBUNdWf2XBS9IBN_DXlM";
+        return "***";
     }
+
 
     private void info(Long chatId, String username, String message) {
         logger.info("User: @" + username + " (ID: " + chatId + ") → " + message);
