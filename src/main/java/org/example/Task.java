@@ -1,34 +1,24 @@
 package org.example;
 
-public class Task {
-    private String text;
-    private boolean done;
-    private long createdAt;
+import java.util.Date;
 
-    public Task(String text) {
+public class Task {
+    private final int id;           // Har user uchun alohida
+    private final String text;
+    private boolean done;
+    private final Date created;
+
+    public Task(int id, String text) {
+        this.id = id;
         this.text = text;
         this.done = false;
-        this.createdAt = System.currentTimeMillis();
+        this.created = new Date();
     }
 
-    public String getText() {
-        return text;
-    }
-
-    public boolean isDone() {
-        return done;
-    }
-
-    public void setDone(boolean done) {
-        this.done = done;
-    }
-
-    public long getCreatedAt() {
-        return createdAt;
-    }
-
-    @Override
-    public String toString() {
-        return (done ? "✅ " : "❌ ") + text;
-    }
+    public int getId() { return id; }
+    public String getText() { return text; }
+    public boolean isDone() { return done; }
+    public void setDone(boolean done) { this.done = done; }
+    public Date getCreated() { return created; }
 }
+
